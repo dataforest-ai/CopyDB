@@ -4,8 +4,8 @@ from sqlalchemy import create_engine
 import pandas as pd
 
 # source and destination databases
-source_engine = create_engine('postgresql://platform_admin:adminAdmin@platform-db.ca6u28qdtkym.us-east-1.rds.amazonaws.com/platform_db')
-destination_engine = create_engine('postgresql://platform_admin:adminAdmin@platform-db.ca6u28qdtkym.us-east-1.rds.amazonaws.com/dev_temp')
+source_engine = create_engine('')
+destination_engine = create_engine('')
 
 def transfer_table(table_name):
     print(table_name)
