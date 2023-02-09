@@ -117,7 +117,7 @@ def add_fk(table_name):
 if __name__ == '__main__':
     with source_engine.connect() as conn:
         table_names = [table_name[0] for table_name in conn.execute("SELECT tablename FROM pg_tables WHERE schemaname = 'public'")]
-    table_names = [s for s in table_names if not any(i.isdigit() for i in s) and s not in ['cryptocurrencies_tweets', 'presales']]
+    table_names = [s for s in table_names if not any(i.isdigit() for i in s)]
 
     # Create a pool of worker processes
     pool = multiprocessing.Pool(processes=4)
